@@ -2,9 +2,8 @@
  * @param {string} s
  * @return {number}
  */
- 
-var romanToInt = function(s) {
-    const symbolVal = {
+
+ const symbolVal = {
     "I" : 1,
     "V" : 5,
     "X" : 10,
@@ -14,6 +13,9 @@ var romanToInt = function(s) {
     "M" : 1000
     }
     
+ 
+var romanToInt = function(s) {
+    
     let result = 0
     for(let i = s.length - 1  ; i >= 0; i--){
         console.log(s.charAt(i))
@@ -21,7 +23,7 @@ var romanToInt = function(s) {
             result = result - symbolVal[s[i]]
         } else {
             result = result + symbolVal[s[i]]
-        }
+        } 
     }
     return result
     
